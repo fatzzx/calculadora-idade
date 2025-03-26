@@ -1,4 +1,4 @@
-function DatePicker() {
+function DatePicker({ onChange }) {
   return (
     <div className="flex flex-row gap-3 mb-6">
       <div className="w-20">
@@ -9,6 +9,7 @@ function DatePicker() {
           type="number"
           placeholder="DD"
           maxLength={2}
+          onChange={onChange("day")}
           className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
       </div>
@@ -20,6 +21,7 @@ function DatePicker() {
           type="number"
           placeholder="MM"
           maxLength={2}
+          onChange={onChange("month")}
           className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
       </div>
@@ -31,6 +33,7 @@ function DatePicker() {
           type="number"
           placeholder="YYYY"
           maxLength={4}
+          onChange={onChange("year")}
           className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
       </div>
